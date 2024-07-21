@@ -3,7 +3,6 @@
 	import { browser } from '$app/environment';
 	import {
 		Frame,
-		Circle,
 		Dial,
 		Emitter,
 		Pen,
@@ -62,13 +61,13 @@
 			/**
 			 * Circle and slider scaling
 			 */
-			const circle = new Circle(20, red).center().sca(5);
-			const slider = new Slider().center();
+			// const circle = new Circle(20, red).center().sca(5);
+			// const slider = new Slider().center();
 
-			slider.on('change', () => {
-				circle.scale = slider.currentValue;
-				stage.update();
-			});
+			// slider.on('change', () => {
+			// 	circle.scale = slider.currentValue;
+			// 	stage.update();
+			// });
 
 			// https://readmedium.com/controlling-the-canvas-with-javascript-d94792aa33cd
 			/**

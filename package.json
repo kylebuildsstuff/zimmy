@@ -41,6 +41,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@zimjs/game": "2.7.1",
 		"zimjs": "^16.4.2"
 	}
 }

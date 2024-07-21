@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { Frame } from 'zimjs';
+	import { Frame, Pic } from 'zimjs';
 	import { Board } from '@zimjs/game';
+	import block from '$lib/assets/blocks_1-45.png';
 
 	new Frame({
 		scaling: FIT,
@@ -9,7 +10,12 @@
 		color: light,
 		outerColor: dark,
 		ready: (frame, stage, width, height, mobile) => {
-			const board = new Board().center();
+			const customTile = new Pic(block);
+
+			const board = new Board({
+				icon: customTile,
+				isometric: true
+			}).center();
 		}
 	});
 </script>

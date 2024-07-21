@@ -10,6 +10,13 @@
 		color: light,
 		outerColor: dark,
 		ready: (frame, stage, width, height, mobile) => {
+			/**
+			 * Doesn't really work...
+			 *
+			 * - Custom tiles get rotated for some reason.
+			 * - Original grid lines still visible
+			 * - the rotated custom tiles just don't look right together
+			 */
 			const customTile = new Pic(block);
 
 			const board = new Board({

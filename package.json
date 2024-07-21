@@ -41,7 +41,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"createjs": "^1.0.1",
 		"zimjs": "^16.4.2"
 	}
 }

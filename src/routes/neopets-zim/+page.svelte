@@ -4,7 +4,7 @@
 	import grass from '$lib/assets/grass.jpg';
 
 	new Frame({
-		scaling: FIT,
+		scaling: 'zimmy',
 		width: 1024,
 		height: 768,
 		color: light,
@@ -52,3 +52,5 @@
 		}
 	});
 </script>
+
+<div id="zimmy" />

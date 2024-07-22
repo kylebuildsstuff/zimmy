@@ -14,7 +14,9 @@
 		});
 
 		// Wait for the application to be ready
-		await app.init();
+		await app.init({
+			resizeTo: window
+		});
 
 		// Now we can safely append the view
 		pixiContainer.appendChild(app.canvas);

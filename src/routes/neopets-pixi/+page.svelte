@@ -17,7 +17,7 @@
 		await app.init();
 
 		// Now we can safely append the view
-		pixiContainer.appendChild(app.view);
+		pixiContainer.appendChild(app.canvas);
 
 		const texture = await PIXI.Assets.load(grass);
 
@@ -29,24 +29,22 @@
 
 		// Create shops
 		const shop1 = new PIXI.Graphics();
-		shop1.beginFill(0xff0000);
-		shop1.drawCircle(0, 0, 40);
-		shop1.endFill();
+		shop1.circle(0, 0, 40);
+		shop1.fill(0xff0000);
 		shop1.position.set(200, 300);
 
 		const shop2 = new PIXI.Graphics();
-		shop2.beginFill(0x0000ff);
-		shop2.drawRect(-40, -40, 80, 80);
-		shop2.endFill();
+		shop2.rect(-40, -40, 80, 80);
+		shop2.fill(0x0000ff);
 		shop2.position.set(500, 400);
 
 		const shop3 = new PIXI.Graphics();
-		shop3.beginFill(0x800080);
 		shop3.moveTo(0, -35);
 		shop3.lineTo(35, 35);
 		shop3.lineTo(-35, 35);
 		shop3.closePath();
-		shop3.endFill();
+		shop3.fill(0x800080);
+
 		shop3.position.set(800, 300);
 
 		const shops = [shop1, shop2, shop3];
@@ -81,7 +79,7 @@
 		});
 
 		return () => {
-			app.destroy(true, { children: true, texture: true, baseTexture: true });
+			app.destroy(true, { children: true, texture: true });
 		};
 	});
 </script>
